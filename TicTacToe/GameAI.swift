@@ -8,6 +8,23 @@
 
 import Foundation
 
-func game(board: GameBoard, isWonBy player: GameBoard.Mark) -> Bool {    
+func game(board: GameBoard, isWonBy player: GameBoard.Mark) -> Bool {
+    
+    //Checking vertical column 0 
+    var numberOfMarks = 0
+    
+    for y in 0..<3 {
+        if board[(0, y)] == player {
+            numberOfMarks += 1
+        }
+    }
+    
+    if numberOfMarks == 3 {
+        return true
+    }
+    
+    //Check another column
+    numberOfMarks = 0
+    
     return false
 }
